@@ -8,6 +8,12 @@ A aplicação oferece funcionalidades de:
 - **Visualização de calendário** com próximas partidas
 - **Informações do elenco** atual do clube
 
+<img width="1917" height="937" alt="image" src="https://github.com/user-attachments/assets/a4048b0c-89cb-4838-80dc-213f4934a3f3" />
+
+<img width="1916" height="935" alt="image" src="https://github.com/user-attachments/assets/7e646445-2ab9-439a-bac9-4c083f5db871" />
+
+<img width="1918" height="939" alt="image" src="https://github.com/user-attachments/assets/11279434-5dd5-4f86-b327-871299769ff4" />
+
 ---
 
 # Orientações para execução
