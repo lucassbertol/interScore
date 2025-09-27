@@ -15,8 +15,7 @@ import qualified Data.Vector as V
 -- Chave para autenticação na API de futebol
 
 apiKey :: String
-apiKey = "a8b13670a43b43079197e65af09c6065"
-
+apiKey = "colocar api key aqui" -- COLOCAR API KEY AQUI
 -- Função principal que aplica todos os filtros
 aplicarFiltros :: Text -> Text -> Text -> Value -> Value
 aplicarFiltros filtro local resultado dadosOriginais = 
