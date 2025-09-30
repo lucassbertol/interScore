@@ -21,7 +21,7 @@ A aplicação oferece funcionalidades de:
 **Instalação de dependências:**
 ```bash
 # Instalar todas as dependências necessárias
-cabal install --lib scotty http-simple http-conduit aeson wai-middleware-static vector text bytestring hspec QuickCheck
+cabal install --lib scotty HTTP-Simple http-conduit aeson wai-extra vector text bytestring hspec QuickCheck
 ```
 
 **Execução do servidor:**
