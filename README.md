@@ -26,7 +26,7 @@ cabal install --lib scotty HTTP-Simple http-conduit aeson wai-extra vector text 
 
 **Execução do servidor:**
 ```bash
-# git clone https://github.com/lucassbertol/interScore.git
+git clone https://github.com/lucassbertol/interScore.git
 cd interScore
 runhaskell main.hs
 
