@@ -1,33 +1,35 @@
 # interScore
 
-O *interScore* é uma aplicação web para consulta de informações do Sport Club Internacional, desenvolvida com **backend em Haskell** usando **`Scotty`** e frontend simples em HTML/JavaScript. O projeto consome dados da [API Football-Data.org](https://www.football-data.org/) para exibir informações sobre jogos do Brasileirão, Libertadores, calendário e elenco atual do clube, com filtros específicos em cada ocasião.
+O interScore é uma aplicação web para consulta de informações do Sport Club Internacional. O backend é escrito em Haskell usando Scotty e o frontend é uma interface simples em HTML/CSS/JavaScript. A aplicação consome dados da API Football-Data.org para exibir informações sobre jogos do Brasileirão, Libertadores, calendário e elenco atual do clube, entre outros.
 
-A aplicação oferece funcionalidades de:
-- **Consulta de partidas** do Brasileirão e Libertadores por ano
-- **Filtragem avançada** por status (finalizados/futuros), local (casa/fora) e resultado (vitória/empate/derrota)
-- **Visualização de calendário** com próximas partidas
-- **Informações do elenco** atual do clube
+## Funcionalidades principais
+- Exibição de jogos e resultados (Brasileirão, Libertadores, etc.)
+- Calendário de partidas
+- Informações do elenco atual do clube
+- Consumo e atualização de dados via Football-Data.org
 
-<img width="1917" height="937" alt="image" src="https://github.com/user-attachments/assets/a4048b0c-89cb-4838-80dc-213f4934a3f3" />
+## Tecnologias
+- Backend: Haskell (Scotty)
+- Frontend: HTML, CSS, JavaScript
+- Fonte de dados: Football-Data.org (API)
 
-<img width="1916" height="935" alt="image" src="https://github.com/user-attachments/assets/7e646445-2ab9-439a-bac9-4c083f5db871" />
+## Pré-requisitos
+- GHC (Glasgow Haskell Compiler) ou Stack/Cabal para compilar e executar o backend
+- Node (opcional, apenas se usar ferramentas de frontend locais)
+- Chave de API do Football-Data.org
 
-<img width="1918" height="939" alt="image" src="https://github.com/user-attachments/assets/11279434-5dd5-4f86-b327-871299769ff4" />
+## Instalação rápida
+1. Clone o repositório:
+   git clone https://github.com/lucassbertol/interScore.git
+2. Entre na pasta do projeto:
+   cd interScore
+3. Configure a chave da API (gerar uma fazendo login em Football-Data.org, após, inserir em
+   FOOTBALL_DATA_API_KEY=**"sua_chave_aqui"** na `main.hs`)
+4. Instale dependências necessárias e rode o programa:
+   cabal install --lib scotty HTTP-Simple http-conduit aeson wai-extra vector text bytestring hspec QuickCheck
+5. runhaskell main.hs
 
----
+## Uso
+- Abra o navegador em http://localhost:3000 (ou na porta configurada) para acessar a interface.
+- Navegue pelas páginas para explorar
 
-# Orientações para execução
-
-**Instalação de dependências:**
-```bash
-# Instalar todas as dependências necessárias
-cabal install --lib scotty HTTP-Simple http-conduit aeson wai-extra vector text bytestring hspec QuickCheck
-```
-
-**Execução do servidor:**
-```bash
-git clone https://github.com/lucassbertol/interScore.git
-cd interScore
-runhaskell main.hs
-
-```
