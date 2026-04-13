@@ -1,76 +1,117 @@
-# Identificação
+<div align="center">
 
-- **Autor:** Lucas Salvini Bertol  
-- **Curso:** Sistemas de Informação  
-- **Disciplina:** Paradigmas de Programação  
+<img src="https://cdn.simpleicons.org/haskell" width="60" alt="Haskell logo"/>
 
----
+# interScore
 
-# Tema / Objetivo
+**A web application for Sport Club Internacional match data and squad info**
 
-O *interScore* é uma aplicação web para consulta de informações do Sport Club Internacional, desenvolvida com **backend em Haskell** usando **`Scotty`** e frontend simples em HTML/JavaScript. O projeto consome dados da [API Football-Data.org](https://www.football-data.org/) para exibir informações sobre jogos do Brasileirão, Libertadores, calendário e elenco atual do clube, com filtros específicos em cada ocasião.
+![Haskell](https://img.shields.io/badge/Haskell-5D4F85?style=flat-square&logo=haskell&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![Scotty](https://img.shields.io/badge/Scotty-5D4F85?style=flat-square&logo=haskell&logoColor=white)
+![API](https://img.shields.io/badge/Football--Data.org-API-red?style=flat-square)
 
-A aplicação oferece funcionalidades de:
-- **Consulta de partidas** do Brasileirão e Libertadores por ano
-- **Filtragem avançada** por status (finalizados/futuros), local (casa/fora) e resultado (vitória/empate/derrota)
-- **Visualização de calendário** com próximas partidas
-- **Informações do elenco** atual do clube
+</div>
 
 ---
 
-# Orientações para execução
+## 📌 Overview
 
-**Instalação de dependências:**
+**interScore** is a web application for querying information about **Sport Club Internacional**, built with a **Haskell backend** using the [Scotty](https://hackage.haskell.org/package/scotty) framework and a simple **HTML/JavaScript frontend**. It consumes data from the [Football-Data.org API](https://www.football-data.org/) to display match results, upcoming fixtures, and squad details.
+
+Developed as part of the **Programming Paradigms** course (*Paradigmas de Programação*) — Systems of Information, UFSM.
+
+---
+
+## ✨ Features
+
+- 🏆 **Brasileirão & Libertadores** — query matches by year for both competitions
+- 🔍 **Advanced filtering** — filter by status (finished/upcoming), venue (home/away), and result (win/draw/loss)
+- 📅 **Match calendar** — view upcoming fixtures
+- 👕 **Current squad** — browse the club's active roster
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Backend | Haskell + Scotty |
+| JSON Parsing | Aeson |
+| HTTP Client | http-conduit |
+| Static Files | wai-middleware-static |
+| Testing | HSpec + QuickCheck |
+| Frontend | HTML5, CSS3, JavaScript |
+| Data Source | Football-Data.org API |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [GHC](https://www.haskell.org/ghc/) and [Cabal](https://www.haskell.org/cabal/) installed
+- A free API key from [football-data.org](https://www.football-data.org/)
+
+### 1. Clone the repository
+
 ```bash
-# Instalar todas as dependências necessárias
+git clone https://github.com/lucassbertol/interScore
+cd interScore
+```
+
+### 2. Install dependencies
+
+```bash
 cabal install --lib scotty HTTP-Simple http-conduit aeson wai-extra vector text bytestring hspec QuickCheck
 ```
 
-**Execução do servidor:**
+### 3. Run the server
+
 ```bash
-# Executar o servidor principal
-git clone https://github.com/lucassbertol/interScore
 runhaskell main.hs
 ```
 
-**Execução dos testes:**
+The application will be available at `http://localhost:3000`.
+
+### 4. Run tests
+
 ```bash
-# Executar ambiente de testes
 runhaskell spec.hs
 ```
----
-
-# Demonstração do resultado final
-
-https://github.com/user-attachments/assets/1cfb5840-74e7-40b7-a5f6-b911a12b0855
 
 ---
 
-# Referências e créditos
+## 📦 Dependencies
 
-- ELC117 – Paradigmas de Programação. Slides da aula: Backend Web com Scotty (Haskell). Disponível em: https://liascript.github.io/course/?https://raw.githubusercontent.com/elc117/demo-scotty-codespace-2025b/main/README.md#1
+| Library | Purpose |
+|---------|---------|
+| [`scotty`](https://hackage.haskell.org/package/scotty) | Minimalist Haskell web framework |
+| [`aeson`](https://hackage.haskell.org/package/aeson) | JSON parsing and encoding |
+| [`http-conduit`](https://hackage.haskell.org/package/http-conduit) | HTTP client with SSL support |
+| [`wai-middleware-static`](https://hackage.haskell.org/package/wai-middleware-static) | Middleware for serving static files |
+| [`hspec`](https://hackage.haskell.org/package/hspec) | Testing framework for Haskell |
+| [`QuickCheck`](https://hackage.haskell.org/package/QuickCheck) | Property-based testing library |
 
-- Football-Data. (n.d.). Quickstart – Football Data API Documentation. Retrieved September 14, 2025, from https://www.football-data.org/documentation/quickstart
+---
 
-- HASKELL. Web.Scotty — Module documentation (scotty-0.22). Disponível em: https://hackage.haskell.org/package/scotty-0.22/docs/Web-Scotty.html
+## 📚 References
 
-- HASKELL. Scotty — Hackage. Disponível em: https://hackage.haskell.org/package/scotty
+- ELC117 – Paradigmas de Programação. [Backend Web com Scotty (Haskell)](https://liascript.github.io/course/?https://raw.githubusercontent.com/elc117/demo-scotty-codespace-2025b/main/README.md#1)
+- [Football-Data.org — API Quickstart](https://www.football-data.org/documentation/quickstart)
+- [Web.Scotty — Hackage Documentation](https://hackage.haskell.org/package/scotty-0.22/docs/Web-Scotty.html)
+- [Build a Haskell Server with Scotty — YouTube](https://www.youtube.com/watch?v=psTTKGj9G6Y)
+- [Data.Aeson.Types — Hackage](https://hackage.haskell.org/package/aeson/docs/Data-Aeson-Types.html)
+- [Data.Maybe — Hackage](https://hackage.haskell.org/package/base/docs/Data-Maybe.html)
 
-- Build a Haskell Server with Scotty framework. 2024. Disponível em: https://www.youtube.com/watch?v=psTTKGj9G6Y
+---
 
-- HACKAGE. Data.Maybe: The Maybe type and associated operations. GHC Base Libraries, 2024. Disponível em: https://hackage.haskell.org/package/base/docs/Data-Maybe.html.
+## 👤 Author
 
-- Haskell JSON parsing with Aeson. Real World Haskell. Disponível em: http://book.realworldhaskell.org/
+**Lucas Salvini Bertol**  
+Systems of Information — Programming Paradigms
 
-- HACKAGE. Data.Aeson.Types: JSON parsing with Maybe types. Aeson Documentation, 2024. Disponível em: https://hackage.haskell.org/package/aeson/docs/Data-Aeson-Types.html.
+[![GitHub](https://img.shields.io/badge/GitHub-lucassbertol-181717?style=flat-square&logo=github)](https://github.com/lucassbertol)
 
-
-**Bibliotecas utilizadas:**
-- `scotty`: Framework web minimalista para Haskell
-- `aeson`: Biblioteca para parsing/encoding JSON
-- `http-conduit`: Cliente HTTP com suporte a SSL
-- `wai-middleware-static`: Middleware para servir arquivos estáticos
-- `hspec`: Framework de testes para Haskell
-- `QuickCheck`: Biblioteca para testes baseados em propriedades
-
-
+---
