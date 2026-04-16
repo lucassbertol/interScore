@@ -20,7 +20,7 @@
 
 **interScore** is a web application for querying information about **Sport Club Internacional**, built with a **Haskell backend** using the [Scotty](https://hackage.haskell.org/package/scotty) framework and a simple **HTML/JavaScript frontend**. It consumes data from the [Football-Data.org API](https://www.football-data.org/) to display match results, upcoming fixtures, and squad details.
 
-Developed as part of the **Programming Paradigms** course (*Paradigmas de Programação*) — Systems of Information, UFSM.
+Developed as part of the **Programming Paradigms** course (*Paradigmas de Programação*) — Information Systems, UFSM.
 
 ---
 
