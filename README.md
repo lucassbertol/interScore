@@ -110,7 +110,7 @@ runhaskell spec.hs
 ## 👤 Author
 
 **Lucas Salvini Bertol**  
-Systems of Information — Programming Paradigms
+Information Systems — Programming Paradigms
 
 [![GitHub](https://img.shields.io/badge/GitHub-lucassbertol-181717?style=flat-square&logo=github)](https://github.com/lucassbertol)
 
